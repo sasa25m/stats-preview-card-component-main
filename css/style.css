@@ -1,0 +1,113 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+:root{
+  --very_dark_blue_m_bg: hsl(233, 47%, 7%);
+  --dark_desaturated_blue_c_bg: hsl(244, 38%, 16%);
+  --soft_violet: hsl(277, 64%, 61%);
+  --white_h_stats: hsl(0, 0%, 100%);
+  --slightly_t_white_p: hsla(0, 0%, 100%, 0.75);
+  --slightly_t_white_s: hsla(0, 0%, 100%, 0.6);
+}
+body{
+background-color: var(--very_dark_blue_m_bg);
+}
+.container{
+width: 1000px;
+height:350px;
+border-radius: 5px;
+background-color: var(--dark_desaturated_blue_c_bg);
+margin: 0 auto;
+display: table;
+transform: translateY(50%);
+}
+
+/* FIRST-SIDE */
+.first-side{
+  padding: 50px;
+  display: table-cell;
+}
+.first-side h1,.heading{
+  color:var(--white_h_stats);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+.first-side span{
+  color: var(--soft_violet);
+}
+.first-side ul li{
+list-style-type: none;
+text-decoration: none;
+}
+.first-side ul{
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+.first-side p{
+  color: var(--slightly_t_white_p);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.stats{
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  color: var(--slightly_t_white_s);
+}
+/* SECOND-SIDE-IMG */
+  /* background-image: url("../images/image-header-desktop.jpg"); */
+.second-side{
+  background-image: url("../images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: 350px;
+  display: table-cell;
+  margin: 0;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+}
+.cover-second-side{
+  background-color: hsl(277, 64%, 40%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.5;
+}
+/* MEDIA QUERY <600px */
+@media screen and (max-width: 600px) {
+   body{
+     margin: 0;
+     padding: 20px 0;
+   }
+  .container{
+    display: grid;
+    width: 400px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    transform: none;
+  }
+.second-side{
+  position: absolute;
+  top:0;
+  border-radius: 5px 5px 0 0;
+}
+.cover-second-side{
+  border-radius: 5px 5px 0 0;
+}
+.first-side{
+  position: relative;
+  top:325px;
+}
+
+
+/* ATTRIBUTION */
+  .attribution{
+    display: none;
+  }
+}
